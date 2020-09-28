@@ -6,4 +6,20 @@
     <version>1.0.0</version>
   </parent>
   <artifactId>myh-blog-repository</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.myh.blog</groupId>
+      <artifactId>myh-blog-common</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.5.3</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+
 </project>
