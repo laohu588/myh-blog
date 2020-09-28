@@ -6,4 +6,18 @@
     <version>1.0.0</version>
   </parent>
   <artifactId>myh-blog-worker</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.myh.blog</groupId>
+      <artifactId>myh-blog-common</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.thymeleaf</groupId>
+      <artifactId>thymeleaf</artifactId>
+    </dependency>
+  </dependencies>
+
 </project>
