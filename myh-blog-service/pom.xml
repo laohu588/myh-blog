@@ -6,4 +6,14 @@
     <version>1.0.0</version>
   </parent>
   <artifactId>myh-blog-service</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.myh.blog</groupId>
+      <artifactId>myh-blog-repository</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+
 </project>
