@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
-@MapperScan("club.javafan.blog.repository")
+@MapperScan("com.myh.blog.repository")
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 @ComponentScan({
         "com.myh.blog.service"

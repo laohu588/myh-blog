@@ -3,7 +3,7 @@ package com.myh.blog.service.impl;
 import club.javafan.blog.common.util.PageQueryUtil;
 import club.javafan.blog.common.util.PageResult;
 import club.javafan.blog.domain.BlogComment;
-import club.javafan.blog.repository.BlogCommentMapper;
+import com.myh.blog.repository.BlogCommentMapper;
 import com.myh.blog.service.CommentService;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;

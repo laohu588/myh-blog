@@ -11,7 +11,7 @@ import club.javafan.blog.domain.example.*;
 import club.javafan.blog.domain.vo.BlogDetailVO;
 import club.javafan.blog.domain.vo.BlogListVO;
 import club.javafan.blog.domain.vo.SimpleBlogListVO;
-import club.javafan.blog.repository.*;
+import com.myh.blog.repository.*;
 import com.myh.blog.service.BlogService;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.ObjectUtils;

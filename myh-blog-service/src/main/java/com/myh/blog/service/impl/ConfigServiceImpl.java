@@ -4,7 +4,7 @@ package com.myh.blog.service.impl;
 import club.javafan.blog.common.util.RedisUtil;
 import club.javafan.blog.domain.Config;
 import club.javafan.blog.domain.example.ConfigExample;
-import club.javafan.blog.repository.ConfigMapper;
+import com.myh.blog.repository.ConfigMapper;
 import com.myh.blog.service.ConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

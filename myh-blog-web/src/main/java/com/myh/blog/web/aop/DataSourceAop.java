@@ -14,10 +14,10 @@ public class DataSourceAop {
 
 
     @Before("@annotation(club.javafan.blog.common.annotation.Slave)||" +
-            "execution( * club.javafan.blog.repository.*.select*(..))||" +
-            "execution( * club.javafan.blog.repository.*.query*(..))||" +
-            "execution( * club.javafan.blog.repository.*.get*(..))||"+
-            "execution( * club.javafan.blog.repository.*.count*(..))")
+            "execution( * com.myh.blog.repository.*.select*(..))||" +
+            "execution( * com.myh.blog.repository.*.query*(..))||" +
+            "execution( * com.myh.blog.repository.*.get*(..))||"+
+            "execution( * com.myh.blog.repository.*.count*(..))")
 
     public void setSlaveDataSource() {
         DataSourceContextHolder.set(SLAVE);
@@ -27,10 +27,10 @@ public class DataSourceAop {
      *  update,delete开头的方法设置为主库
      */
     @Before("@annotation(club.javafan.blog.common.annotation.Master)||" +
-            "execution( * club.javafan.blog.repository.*.insert*(..))||" +
-            "execution( * club.javafan.blog.repository.*.update*(..))||" +
-            "execution( * club.javafan.blog.repository.*.delete*(..))||" +
-            "execution( * club.javafan.blog.repository.*.add*(..))")
+            "execution( * com.myh.blog.repository.*.insert*(..))||" +
+            "execution( * com.myh.blog.repository.*.update*(..))||" +
+            "execution( * com.myh.blog.repository.*.delete*(..))||" +
+            "execution( * com.myh.blog.repository.*.add*(..))")
     public void setMasterDataSource() {
         DataSourceContextHolder.set(MASTER);
     }

@@ -3,7 +3,7 @@ package com.myh.blog.service.impl;
 import club.javafan.blog.common.util.PageQueryUtil;
 import club.javafan.blog.common.util.PageResult;
 import club.javafan.blog.domain.BlogLink;
-import club.javafan.blog.repository.LinkMapper;
+import com.myh.blog.repository.LinkMapper;
 import com.myh.blog.service.LinkService;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;

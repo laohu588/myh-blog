@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="club.javafan.blog.repository.AdminUserMapper">
+<mapper namespace="com.myh.blog.repository.AdminUserMapper">
   <resultMap id="BaseResultMap" type="club.javafan.blog.domain.AdminUser">
     <!--@mbg.generated-->
     <!--@Table tb_admin_user-->

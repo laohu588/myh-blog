@@ -1,4 +1,4 @@
-package club.javafan.blog.repository;
+package com.myh.blog.repository;
 
 import club.javafan.blog.domain.Config;
 import club.javafan.blog.domain.example.ConfigExample;

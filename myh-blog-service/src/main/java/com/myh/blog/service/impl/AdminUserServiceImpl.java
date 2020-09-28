@@ -5,7 +5,7 @@ import club.javafan.blog.common.result.ResponseResult;
 import club.javafan.blog.common.util.MD5Util;
 import club.javafan.blog.domain.AdminUser;
 import club.javafan.blog.domain.example.AdminUserExample;
-import club.javafan.blog.repository.AdminUserMapper;
+import com.myh.blog.repository.AdminUserMapper;
 import com.myh.blog.service.AdminUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
