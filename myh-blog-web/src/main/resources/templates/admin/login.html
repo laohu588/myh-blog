@@ -1,0 +1,172 @@
+<!DOCTYPE html><!--suppress ALL-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NB-Coder Blog| Log in</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" th:href="@{/admin/dist/img/favicon.png}"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{/admin/dist/css/font-awesome.min.css}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" th:href="@{/admin/dist/css/ionicons.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/admin/dist/css/adminlte.min.css}">
+    <!--live2d-->
+    <script th:src="@{/blog/live2d-widget/live2d.min.js}"></script>
+
+    <style>
+
+        #stage {
+            position: relative;
+        }
+
+        #stage img {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+
+        #stage a {
+            position: absolute;
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+        }
+
+        #inner {
+            position: relative;
+            background-color: #999;
+            clip-path: circle(120px at center);
+            -webkit-clip-path: circle(120px at center);
+        }
+
+        #cover {
+            position: absolute;
+            background-color: #b38bcb;
+            width: 100%;
+            height: 100%;
+            bottom: 10%;
+            transition: all 1s;
+            box-shadow: 0 0 0 5px rgba(0, 0, 0, .1);
+        }
+
+        #text {
+            position: absolute;
+            bottom: 30%;
+            font-size: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.4;
+            font-weight: bold;
+        }
+
+        #detail {
+            position: absolute;
+            background: rgba(255, 255, 255, .1);
+            width: 100%;
+            height: 10px;
+            bottom: 0;
+        }
+
+        #handle {
+            position: absolute;
+            background: #ccc;
+            bottom: -2px;
+            box-shadow: 0 1px 0 1px rgba(0, 0, 0, .1);
+            height: 8px;
+            left: 50%;
+            margin-left: -15px;
+            width: 30px;
+            cursor: pointer;
+        }
+
+        #info {
+            font-size: 1rem;
+            left: 40px;
+            bottom: 20px;
+        }
+
+        #refresh {
+            font-size: 1rem;
+            right: 40px;
+            bottom: 20px;
+        }
+
+        #live2d {
+            cursor: grab;
+        }
+
+        #live2d:active {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <!-- /.login-logo -->
+    <div class="card">
+        <div id="stage">
+            <div id="inner">
+                <div id="cover">
+                    <div id="text">
+                        <span>
+                            Lumos
+                        </span>
+                    </div>
+                    <div id="detail"></div>
+                    <div id="handle"></div>
+                </div>
+                <canvas class="mb-4" id="live2d" width="300" height="300"></canvas>
+            </div>
+            <a id="info" href="javascript:info()"><i class="fa fa-lg fa-info" alt="每日鸡汤"></i></a>
+            <a id="refresh" href="javascript:refresh()"><i class="fa fa-lg fa-refresh" alt="换肤"></i></a>
+        </div>
+        <div class="card-body login-card-body">
+            <form th:action="@{/admin/login}" method="post">
+                <div class="form-group has-feedback">
+                    <input type="text" id="userName" name="userName" class="form-control" placeholder="请输入账号"
+                           required="true">
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="请输入密码"
+                           required="true">
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" class="form-control" name="verifyCode" placeholder="请输入验证码" required="true">
+                    </div>
+                    <div class="col-6">
+                        <img alt="单击图片刷新！" class="pointer" th:src="@{/common/kaptcha}"
+                             onclick="this.src='/common/kaptcha?d='+new Date()*1">
+                    </div>
+                </div>
+                <div class="form-group has-feedback"></div>
+                <div class="row">
+                    <div class="col-8">
+                        <span class="alert" style="color: red" th:text="${errorMsg}"></span>
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">登录
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <!-- /.login-card-body -->
+    </div>
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
+<!-- Bootstrap 4 -->
+<script th:src="@{/admin/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!-- 背景动画 -->
+<script type="text/javascript" color="0,0,215" opacity='0.7' zIndex="-2" count="199"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+<script th:src="@{/admin/dist/js/login.js}"></script>
+</body>
+</html>

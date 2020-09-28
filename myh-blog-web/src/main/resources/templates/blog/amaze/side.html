@@ -1,0 +1,116 @@
+<!DOCTYPE html><!--suppress ALL-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="side-fragment" class="am-u-lg-4 am-u-sm-12 am-u-lg-offset-0 am-u-sm-offset-0 sidebar-container">
+    <section>
+        <section>
+            <div class="sidebar-header">
+                <span class="sidebar-header-title">
+                    搜索文章
+                </span>
+            </div>
+            <div class="sidebar-search">
+                <form method="get" onsubmit="return false;" accept-charset="utf-8">
+                    <div class="search-input">
+                        <input type="text" name="keyword" id="searchbox" placeholder="输入关键字搜索">
+                        <button type="submit" class="search-submit" onclick="search()"></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div class="sidebar-header">
+                <span class="sidebar-header-title">
+                    热门标签
+                </span>
+            </div>
+            <div class="tags ">
+                <th:block th:if="${null != hotTags}">
+                    <th:block th:each="hotTag : ${hotTags}">
+                        <a rel="tag" class="am-link-muted" th:href="@{'/tag/' + ${hotTag.tagName}}">
+                            <th:block th:text="${hotTag.tagName}+'('+${hotTag.tagCount}+')'"></th:block>
+                        </a>
+                    </th:block>
+                </th:block>
+            </div>
+        </section>
+        <section>
+            <div class="sidebar-header">
+                <span class="sidebar-header-title">
+                    最新发布
+                </span>
+            </div>
+            <div class="sidebar-list">
+                <ul class="sidebar-list-body sidebar-list-items am-link-muted">
+                    <th:block th:if="${null != newBlogs}">
+                        <th:block th:each="newBlog,newBlogStat : ${newBlogs}">
+                            <li class="sidebar-list-item"><a th:href="@{'/blog/' + ${newBlog.blogId}}"
+                                                             class="tag tooltipped tooltipped-n">
+                                <th:block th:if="${newBlogStat.count <= 3}">
+                                    <span class="am-badge am-badge-warning am-radius"
+                                          th:text="${newBlogStat.count}"></span>&nbsp;&nbsp;
+                                    <th:block th:text="${newBlog.blogTitle}"></th:block>
+                                </th:block>
+                                <th:block th:if="${newBlogStat.count > 3}">
+                                    <span class="am-badge am-radius" th:text="${newBlogStat.count}"></span>&nbsp;&nbsp;
+                                    <th:block th:text="${newBlog.blogTitle}"></th:block>
+                                </th:block>
+                            </a>
+                            </li>
+                        </th:block>
+                    </th:block>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="sidebar-header">
+                <span class="sidebar-header-title">
+                    点击最多
+                </span>
+            </div>
+            <div class="sidebar-list">
+                <ul class="sidebar-list-body sidebar-list-items am-link-muted">
+                    <th:block th:if="${null != hotBlogs}">
+                        <th:block th:each="hotBlog,hotBlogStat: ${hotBlogs}">
+                            <li class="sidebar-list-item"><a class="tag tooltipped tooltipped-n"
+                                                             th:href="@{'/blog/' + ${hotBlog.blogId}}">
+                                <th:block th:if="${hotBlogStat.count <= 3}">
+                                    <span class="am-badge am-badge-warning am-radius"
+                                          th:text="${hotBlogStat.count}"></span>&nbsp;&nbsp;<th:block
+                                        th:text="${hotBlog.blogTitle}"></th:block>
+                                </th:block>
+                                <th:block th:if="${hotBlogStat.count > 3}">
+                                    <span class="am-badge am-radius" th:text="${hotBlogStat.count}"></span>&nbsp;&nbsp;<th:block
+                                        th:text="${hotBlog.blogTitle}"></th:block>
+                                </th:block>
+                            </a></li>
+                        </th:block>
+                    </th:block>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="sidebar-header">
+                <span class="sidebar-header-title">
+                    博客信息
+                </span>
+            </div>
+            <div class="sidebar-list">
+                <ul class="sidebar-list-body sidebar-list-items am-link-muted">
+                    <li class="sidebar-list-item">
+                        <span style="font-weight: bold"><i class="am-icon-eye am-icon-fw"></i> 今日访问次数: </span>
+                        <th:block th:text="${configurations.get('indexViewToday')}"></th:block>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span style="font-weight: bold"><i class="am-icon-user am-icon-fw"></i> 总访问次数：</span>
+                        <th:block th:text="${configurations.get('indexViewAll')}"></th:block>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span style="font-weight: bold"><i class="am-icon-trophy am-icon-fw"></i> 稳定运行天数：</span>
+                        <th:block th:text="${configurations.get('runDays')}"></th:block>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+</div>
+</html>

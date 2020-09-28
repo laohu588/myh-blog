@@ -83,7 +83,7 @@ spring:
     to: donghusoft@163.com
     #抄送列表 ,分隔
     cc: xx@qq.com,xx@qq.com
-    subject: 博客日报 #博客主题
+    subject: 学好Java #博客主题
     host: smtp.exmail.qq.com
     username: xx@javafan.club
     password: dadasa #邮箱授权码  需要在邮箱中申请
