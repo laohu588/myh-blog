@@ -3,7 +3,7 @@ package com.myh.blog.web.controller.admin;
 import club.javafan.blog.common.result.ResponseResult;
 import club.javafan.blog.common.util.PageQueryUtil;
 import club.javafan.blog.common.util.PageResult;
-import club.javafan.blog.service.CategoryService;
+import com.myh.blog.service.CategoryService;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;

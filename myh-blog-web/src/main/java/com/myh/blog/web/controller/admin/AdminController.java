@@ -7,7 +7,7 @@ import club.javafan.blog.common.util.CookiesUtil;
 import club.javafan.blog.common.util.MD5Util;
 import club.javafan.blog.common.util.RedisUtil;
 import club.javafan.blog.domain.AdminUser;
-import club.javafan.blog.service.*;
+import com.myh.blog.service.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;

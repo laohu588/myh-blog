@@ -1,4 +1,4 @@
-package club.javafan.blog.service;
+package com.myh.blog.service;
 
 import java.util.Map;
 

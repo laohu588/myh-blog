@@ -1,4 +1,4 @@
-package club.javafan.blog.service;
+package com.myh.blog.service;
 
 
 import club.javafan.blog.common.result.ResponseResult;

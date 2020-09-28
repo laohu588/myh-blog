@@ -1,4 +1,4 @@
-package club.javafan.blog.service.impl;
+package com.myh.blog.service.impl;
 
 
 import club.javafan.blog.common.util.PageQueryUtil;
@@ -7,7 +7,7 @@ import club.javafan.blog.domain.BlogCategory;
 import club.javafan.blog.domain.example.BlogCategoryExample;
 import club.javafan.blog.repository.BlogCategoryMapper;
 import club.javafan.blog.repository.BlogMapper;
-import club.javafan.blog.service.CategoryService;
+import com.myh.blog.service.CategoryService;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +20,7 @@ import java.util.Objects;
 
 import static org.apache.commons.lang3.math.NumberUtils.INTEGER_ZERO;
 
-/**
- * @author 敲代码的长腿毛欧巴(博客)
- * @date 2019/12/25 21:06
- * @desc 目录
- */
+
 @Service
 public class CategoryServiceImpl implements CategoryService {
 

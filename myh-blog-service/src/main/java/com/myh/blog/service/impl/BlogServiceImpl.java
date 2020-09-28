@@ -1,4 +1,4 @@
-package club.javafan.blog.service.impl;
+package com.myh.blog.service.impl;
 
 import club.javafan.blog.common.constant.RedisKeyConstant;
 import club.javafan.blog.common.result.ResponseResult;
@@ -12,7 +12,7 @@ import club.javafan.blog.domain.vo.BlogDetailVO;
 import club.javafan.blog.domain.vo.BlogListVO;
 import club.javafan.blog.domain.vo.SimpleBlogListVO;
 import club.javafan.blog.repository.*;
-import club.javafan.blog.service.BlogService;
+import com.myh.blog.service.BlogService;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.BeanUtils;
@@ -32,11 +32,7 @@ import static org.apache.commons.collections4.CollectionUtils.isNotEmpty;
 import static org.apache.commons.lang3.StringUtils.isNotEmpty;
 import static org.apache.commons.lang3.math.NumberUtils.*;
 
-/**
- * @author 敲代码的长腿毛欧巴(博客)
- * @date 2019/12/25 21:06
- * @desc 博客操作类
- */
+
 @Service
 public class BlogServiceImpl implements BlogService {
 

@@ -1,11 +1,11 @@
-package club.javafan.blog.service.impl;
+package com.myh.blog.service.impl;
 
 
 import club.javafan.blog.common.util.RedisUtil;
 import club.javafan.blog.domain.Config;
 import club.javafan.blog.domain.example.ConfigExample;
 import club.javafan.blog.repository.ConfigMapper;
-import club.javafan.blog.service.ConfigService;
+import com.myh.blog.service.ConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -23,11 +23,7 @@ import static club.javafan.blog.common.util.DateUtils.getDistanceToNow;
 import static club.javafan.blog.common.util.DateUtils.getToday;
 import static org.apache.commons.lang3.math.NumberUtils.INTEGER_ZERO;
 
-/**
- * @author 敲代码的长腿毛欧巴(博客)
- * @date 2019/12/25 21:07
- * @desc 博客配置类
- */
+
 @Service
 public class ConfigServiceImpl implements ConfigService {
     /**

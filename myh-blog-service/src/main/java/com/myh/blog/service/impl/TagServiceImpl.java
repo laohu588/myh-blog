@@ -1,4 +1,4 @@
-package club.javafan.blog.service.impl;
+package com.myh.blog.service.impl;
 
 
 import club.javafan.blog.common.util.PageQueryUtil;
@@ -8,7 +8,7 @@ import club.javafan.blog.domain.BlogTagCount;
 import club.javafan.blog.domain.example.BlogTagExample;
 import club.javafan.blog.repository.BlogTagMapper;
 import club.javafan.blog.repository.BlogTagRelationMapper;
-import club.javafan.blog.service.TagService;
+import com.myh.blog.service.TagService;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,11 +19,7 @@ import java.util.List;
 import static org.apache.commons.lang3.math.NumberUtils.BYTE_ZERO;
 import static org.apache.commons.lang3.math.NumberUtils.INTEGER_ZERO;
 
-/**
- * @author 敲代码的长腿毛欧巴(博客)
- * @date 2019/12/25 21:08
- * @desc 博客标签服务
- */
+
 @Service
 public class TagServiceImpl implements TagService {
 

@@ -1,10 +1,10 @@
-package club.javafan.blog.service.impl;
+package com.myh.blog.service.impl;
 
 import club.javafan.blog.common.util.PageQueryUtil;
 import club.javafan.blog.common.util.PageResult;
 import club.javafan.blog.domain.BlogLink;
 import club.javafan.blog.repository.LinkMapper;
-import club.javafan.blog.service.LinkService;
+import com.myh.blog.service.LinkService;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,11 +17,7 @@ import java.util.stream.Collectors;
 
 import static org.apache.commons.lang3.math.NumberUtils.INTEGER_ZERO;
 
-/**
- * @author 敲代码的长腿毛欧巴(博客)
- * @date 2INTEGER_ZERO19/12/25 21:INTEGER_ZERO8
- * @desc 博客友情链接服务
- */
+
 @Service
 public class LinkServiceImpl implements LinkService {
 

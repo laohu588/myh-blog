@@ -56,7 +56,7 @@ public class LoggerExceptionAop {
     @Value("#{'${spring.mail.cc}'.split(',')}")
     private String[] cc;
 
-    @Pointcut(value = "execution(public * club.javafan.blog.service.impl.*.*(..))")
+    @Pointcut(value = "execution(public * com.myh.blog.service.*.*(..))")
     private void servicePointCut() {
     }
 

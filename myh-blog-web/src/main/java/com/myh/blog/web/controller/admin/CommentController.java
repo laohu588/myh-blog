@@ -6,7 +6,7 @@ import club.javafan.blog.common.result.ResponseResult;
 import club.javafan.blog.common.util.PageQueryUtil;
 import club.javafan.blog.common.util.PageResult;
 import club.javafan.blog.domain.BlogComment;
-import club.javafan.blog.service.CommentService;
+import com.myh.blog.service.CommentService;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

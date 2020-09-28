@@ -4,7 +4,7 @@ package com.myh.blog.web.controller.admin;
 import club.javafan.blog.common.result.ResponseResult;
 import club.javafan.blog.common.util.PageQueryUtil;
 import club.javafan.blog.common.util.PageResult;
-import club.javafan.blog.service.TagService;
+import com.myh.blog.service.TagService;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;

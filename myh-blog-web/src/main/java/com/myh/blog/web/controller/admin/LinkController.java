@@ -4,7 +4,7 @@ import club.javafan.blog.common.result.ResponseResult;
 import club.javafan.blog.common.util.PageQueryUtil;
 import club.javafan.blog.common.util.PageResult;
 import club.javafan.blog.domain.BlogLink;
-import club.javafan.blog.service.LinkService;
+import com.myh.blog.service.LinkService;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;

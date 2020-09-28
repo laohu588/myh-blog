@@ -11,7 +11,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @MapperScan("club.javafan.blog.repository")
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 @ComponentScan({
-        "club.javafan.blog.service"
+        "com.myh.blog.service"
         , "com.myh.blog.web.controller"
         , "com.myh.blog.web.aop"
         , "com.myh.blog.web.filter"

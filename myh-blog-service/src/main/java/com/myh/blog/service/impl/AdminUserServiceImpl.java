@@ -1,4 +1,4 @@
-package club.javafan.blog.service.impl;
+package com.myh.blog.service.impl;
 
 
 import club.javafan.blog.common.result.ResponseResult;
@@ -6,7 +6,7 @@ import club.javafan.blog.common.util.MD5Util;
 import club.javafan.blog.domain.AdminUser;
 import club.javafan.blog.domain.example.AdminUserExample;
 import club.javafan.blog.repository.AdminUserMapper;
-import club.javafan.blog.service.AdminUserService;
+import com.myh.blog.service.AdminUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,11 +17,7 @@ import java.util.Objects;
 
 import static org.apache.commons.lang3.math.NumberUtils.INTEGER_ZERO;
 
-/**
- * @author 敲代码的长腿毛欧巴(博客)
- * @date 2019/12/11 22:12
- * @desc 管理员登录服务类
- */
+
 @Service
 public class AdminUserServiceImpl implements AdminUserService {
 

@@ -1,7 +1,7 @@
 package com.myh.blog.web.controller.admin;
 
 import club.javafan.blog.common.result.ResponseResult;
-import club.javafan.blog.service.ConfigService;
+import com.myh.blog.service.ConfigService;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;

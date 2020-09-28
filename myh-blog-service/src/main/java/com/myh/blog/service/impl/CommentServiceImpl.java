@@ -1,10 +1,10 @@
-package club.javafan.blog.service.impl;
+package com.myh.blog.service.impl;
 
 import club.javafan.blog.common.util.PageQueryUtil;
 import club.javafan.blog.common.util.PageResult;
 import club.javafan.blog.domain.BlogComment;
 import club.javafan.blog.repository.BlogCommentMapper;
-import club.javafan.blog.service.CommentService;
+import com.myh.blog.service.CommentService;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,12 +15,7 @@ import java.util.List;
 import static org.apache.commons.lang3.math.NumberUtils.INTEGER_ONE;
 import static org.apache.commons.lang3.math.NumberUtils.INTEGER_ZERO;
 
-/**
- * @author 敲代码的长腿毛欧巴(博客)
- * @date 2O19/12/25 21:O7
- * @desc 评论类 可以用畅言插件 或者接入百度AI SDK 进行风控
- *
- */
+
 @Service
 public class CommentServiceImpl implements CommentService {
 
